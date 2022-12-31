@@ -1,3 +1,4 @@
+import gc
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.collections import PolyCollection
@@ -30,7 +31,10 @@ def hex_grid(mat, cmap=None, file_name=None):
 
     if file_name:
         plt.savefig(file_name, dpi=600)
-        plt.close()
+        plt.cla()
+        plt.close("all")
+        del verts, i, j, x, y, z, centers, offsets, mat
+        gc.collect()
     else:
         plt.show()
 

@@ -17,7 +17,7 @@
 
 ## Building
 
-On Uniy-like systems simply run `./compile.sh`. This will create a dist directory with the compiled binary.
+On Unix-like systems simply run `./compile.sh`. This will create a dist directory with the compiled binary.
 
 Build dependencies:
 
