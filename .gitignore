@@ -1,13 +1,7 @@
 __pycache__/
-build/
-cmake-build-debug/
 .idea/
+.vscode/
 .clangd/
-frames/
-gifs/
 
-
-snowflake
-
-*.json
-!parameters.json
+build/
+dist/
