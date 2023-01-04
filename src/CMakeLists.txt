@@ -4,8 +4,8 @@ project(SnowflakeGeneration)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SRC_FILES
-    src/main.cpp
-    src/lattice.cpp
+    main.cpp
+    lattice.cpp
 )
 
 add_executable(snowflake ${SRC_FILES})

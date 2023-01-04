@@ -6,7 +6,7 @@
 [ -d dist/figures ] || mkdir dist/figures
 cd build
 
-cmake ..
+cmake ../src
 cmake --build .
 
 mv ./snowflake ../dist/snowflake
