@@ -6,7 +6,8 @@
 #include <string>
 #include <vector>
 
-struct Cell {
+struct Cell
+{
 	bool inSnowflake_before = false;
 	double vaporMass_before = 0;
 	double solidMass_before = 0;
@@ -18,14 +19,15 @@ struct Cell {
 	double liquidMass_after = 0;
 };
 
-class Lattice : public std::vector<std::vector<Cell>> {
+class Lattice : public std::vector<std::vector<Cell>>
+{
 	size_t latticeSize;
 	std::map<std::string, double> parameters;
 
-	std::list<std::pair<size_t, size_t>> boundary;
-	std::list<std::pair<size_t, size_t>> complementOfClosure;
+	std::vector<std::pair<size_t, size_t>> boundary;
+	std::vector<std::pair<size_t, size_t>> complementOfClosure;
 
-   public:
+public:
 	Lattice(size_t size, std::map<std::string, double> parameters);
 
 	void diffuse();
@@ -36,7 +38,7 @@ class Lattice : public std::vector<std::vector<Cell>> {
 
 	void saveTo(std::string fileName) const;
 
-   private:
+private:
 	void freezeCenter();
 	void setDensityOutsideSnowflake();
 
