@@ -8,7 +8,7 @@ rm -rf build
 [ -d dist/figures ] || mkdir dist/figures
 cd build
 
-cmake ../src
+cmake ../src_mp
 cmake --build .
 
 mv ./snowflake ../dist/snowflake
