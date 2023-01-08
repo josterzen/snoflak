@@ -16,8 +16,6 @@ int main(int argc, char *argv[]) {
 
 	Lattice lattice(parameters["size"], parameters);
 
-	MPI_Init(&argc, &argv);
-
 	double wdur = omp_get_wtime();
 
 	for (size_t i = 0; i < iterations; i++) {
@@ -39,8 +37,6 @@ int main(int argc, char *argv[]) {
 
 	wdur = omp_get_wtime() - wdur;
 	std::cout << "Execution time: " << wdur << "s" << std::endl << std::flush;
-
-	MPI_Finalize();
 
 	return 0;
 }
